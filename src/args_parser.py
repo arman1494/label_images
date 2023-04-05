@@ -6,7 +6,7 @@ import argparse
 from typing import List
 from pathlib import Path
 
-_IMAGES_SUFFIX = ['.jpg', '.png', '.JPG', '.PNG']
+IMAGES_SUFFIX = ['.jpg', '.png']
 
 
 def gen_arguments(argv: List[str]):
@@ -58,7 +58,7 @@ def does_input_dir_valid(
         raise FileNotFoundError('The given path does not refer to a directory with images content.')
 
     intrr = 0
-    for suffix in _IMAGES_SUFFIX:
+    for suffix in IMAGES_SUFFIX:
         images_names = list(Path(local_images_path).glob(f'*{suffix}'))
         if len(images_names) != 0:
             intrr += 1
