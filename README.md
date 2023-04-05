@@ -5,6 +5,8 @@ A powerful image labeling tool designed to enhance your image processing workflo
 ## Titles
 
 - [Create virtualenv](#create-virtualenv)
+- [Install dependencies](#install-dependencies)
+- [Test](#test)
 
 ## Create virtualenv
 
@@ -19,4 +21,14 @@ cd venv\Scripts
 activate
 ```
 
+## Install dependencies
 
+```bash
+pip install -r requirements.txt
+```
+
+## Test
+
+```bash
+coverage run -m pytest
+```
